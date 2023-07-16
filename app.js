@@ -20,7 +20,7 @@ const isAuth = require('./middleware/is-auth');
 //const mongoConnect = require('./util/database').mongoConnect; 
 const User = require('./models/user');
 
-const MONGODB_URI= 'mongodb+srv://harshvardhansharma:124925@cluster0.fajcusn.mongodb.net/shop';
+const MONGODB_URI= 'mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.fajcusn.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}';
 // `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.fajcusn.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 // mongodb+srv://harshvardhansharma:124925@cluster0.fajcusn.mongodb.net/
 const app = express();
